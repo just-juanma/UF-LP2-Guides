@@ -21,7 +21,7 @@ To use the project, we debug it using Visual Studio 2022 Community in C# languag
 This repository does not seek to have perfect error control, and yet it relies heavily on main input. That is why the care that the user must take is the values that are entered.
 
 ## License <a name="license"></a>
-This Practical Work is subject to GPL-3.0 license, more information in the LICENSE.md file.
+This Guides are subject to GPL-3.0 license, more information in the LICENSE.md file.
 
 ---
 
