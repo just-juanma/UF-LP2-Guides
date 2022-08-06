@@ -4,87 +4,112 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Recursion
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int n = 5; // cambiar este numero por el que quieras saber su cantidad de digitos
-            int n2 = 784;
-            string str = "Josefina Herrera Juan Manuel Pampa Team Lorenzo Alegre";
-            string neuquen = "neuquen";
-            string nose = "Me gustan las verduras";
-            Console.WriteLine("La cantidad de digitos del numero " + n + " es: "+ nDigitos(n));
-            Console.WriteLine("Inversa de " + n2 + " es: " + invertirRecursivo(n2));
-            Console.WriteLine("Inversa de " + str + " es: " + invertirString(str));
-            Console.WriteLine("La palabra " + neuquen);
-            if (isPalindromo(neuquen)) Console.WriteLine(" es palindromo");
-            else Console.WriteLine(" no es palindromo");
-            Console.WriteLine("La cantidad de vocales es: " + nVocales(nose));
+            // exercise 1
+            int n = 5; // change this number to the number you want to know its number of digits
+            Console.WriteLine("The number of digits of the number " + n + " is: " + nDigits(n));
+
+            // exercise 2
+            int n2 = 784; // change this number to the number you want to know its number of digits
+            Console.WriteLine("Inverse of " + n2 + " is: " + invertRecursive(n2));
+
+            // exercise 3
+            string str = "By Josefina Herrera and Juan M. Kapnik";
+            Console.WriteLine("Inverse of " + str + " is: " + invertString(str));
+
+            // exercise 4
+            string palindrome = "neuquen";
+            if (isPalindrome(palindrome)) Console.WriteLine(" is palindrome");
+            else Console.WriteLine(" is not palindrome");
+
+            // exercise 5
+            string vowels = "I like vegetables";
+            Console.WriteLine("The number of vowels in " + vowels + " is: " + nVowels(vowels));
         }
+        
+
         /// <summary>
-        /// Recursion de la cantidad de digitos de un numero. (seguir)
-        /// Recordar que para el ejercicio 2 esta funcion fue modificada, aceptando cualquier int signed
+        /// Recursion of the number of digits of a number. 
+        /// Remember that for exercise 2 this function was modified, accepting any signed int.
+        /// In case you want to do this exercise correctly (as per the guide), change what the function returns to "uint", and the parameter to "uint". 
         /// </summary>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        static int nDigitos(int n) {
+        /// <param name="n">Number to count its digits</param>
+        /// <returns>Quantity of digits of the number</returns>
+
+        static int nDigits(int n) {
             if (n < 10) return 1;
             else
-            return 1 + nDigitos(n / 10);
+            return 1 + nDigits(n / 10);
         }
 
-        static int invertirRecursivo(int n) {
-            int temp = nDigitos(n);
+        /// <summary>
+        /// Allows to find the inverse of any number using decimal base -> pow(10, n - 1)
+        /// </summary>
+        /// <param name="n">Number to find its inverse</param>
+        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.math?view=net-6.0"/>
+        /// <returns>Inverse of a number</returns>
+        static int invertRecursive(int n) {
+            int temp = nDigits(n);
             if (n == 0) return n;
             else            
-                return (int)(Math.Pow(10, temp - 1)) * (n % 10) + invertirRecursivo(n / 10);                      
+                return (int)(Math.Pow(10, temp - 1)) * (n % 10) + invertRecursive(n / 10);                      
         }
 
-        static string invertirString(string cadena) {
-            int temp = cadena.Length - 1;
-            if (temp == 0) return cadena;
+        /// <summary>
+        /// Allows to find the inverse of any string
+        /// </summary>
+        /// <param name="ch">Character array (string)</param>
+        /// <returns>String reverse</returns>
+        static string invertString(string ch) {
+            int temp = ch.Length - 1;
+            if (temp == 0) return ch;
             else
-                return cadena[temp] + invertirString(cadena.Remove(temp));
+                return ch[temp] + invertString(ch.Remove(temp));
 
         }
 
         /// <summary>
-        /// No es recursion realmente (paja)
+        /// If we use the function from the other exercise, and look for if it is equal to the original word, no further recursion is necessary
         /// </summary>
-        /// <param name="cadena"></param>
-        /// <returns></returns>
-        static bool isPalindromo(string cadena)
+        /// <param name="ch">Character array (string)</param>
+        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0"/>
+        /// <returns>If its palindrome, or not</returns>
+        static bool isPalindrome(string ch)
         {
-            int temp = cadena.Length - 1;
+            int temp = ch.Length - 1;
             if (temp == 1 || temp == 0) return true;
             else
-                return String.Equals(cadena, invertirString(cadena));
+                return String.Equals(ch, invertString(ch));
         }
 
         /// <summary>
-        /// SOLO CONSIDERAMOS MAYUSCULAS Y MINUSCULAS, NO TILDES NI NADA RARO EN ESPAñOL.. SALUDOS!!!!
+        /// This exercise could surely have been performed in a more optimal way. We feel that recursion is not very useful in this case
         /// </summary>
-        /// <param name="cadena"></param>
-        /// <returns></returns>
-        static uint nVocales(string cadena)
+        /// <param name="ch">Character array (string)</param>
+        /// <returns>Vowels total</returns>
+        static uint nVowels(string ch)
         {
-            int temp = cadena.Length - 1, cont = 0;
+            int temp = ch.Length - 1, cont = 0;
             if (temp == 0) return (uint)cont;
             else
             {
-                if     (cadena[temp] == 'a' ||
-                        cadena[temp] == 'e' ||
-                        cadena[temp] == 'i' ||
-                        cadena[temp] == 'o' ||
-                        cadena[temp] == 'u' ||
-                        cadena[temp] == 'A' ||
-                        cadena[temp] == 'E' ||
-                        cadena[temp] == 'I' ||
-                        cadena[temp] == 'O' ||
-                        cadena[temp] == 'U') cont++;
-                return (uint)cont + nVocales(cadena.Remove(temp));
+                if     (ch[temp] == 'a' ||
+                        ch[temp] == 'e' ||
+                        ch[temp] == 'i' ||
+                        ch[temp] == 'o' ||
+                        ch[temp] == 'u' ||
+                        ch[temp] == 'A' ||
+                        ch[temp] == 'E' ||
+                        ch[temp] == 'I' ||
+                        ch[temp] == 'O' ||
+                        ch[temp] == 'U') cont++;
+                return (uint)cont + nVowels(ch.Remove(temp));
             }
         }
 
