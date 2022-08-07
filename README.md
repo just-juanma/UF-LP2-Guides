@@ -1,4 +1,4 @@
-# Guides-Universidad-Favaloro-LP2-spanish-work
+# Guides-LP2
 By [Josefina Herrera](https://github.com/josefinaherrera98) and Juan Manuel González Kapnik (owner).
 
 ## 📋 Table of contents
