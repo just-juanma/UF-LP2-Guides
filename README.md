@@ -9,8 +9,10 @@ By [Josefina Herrera](https://github.com/josefinaherrera98) and Juan Manuel Gonz
 5. [References](#references)
 
 ## 💻 Development of the guides <a name="description"></a>
-
+### Recursion
 The first guide was made by implementing recursion in the "recursion" project. The purpose is to demonstrate that using this method promises to obtain a "tidier" but less efficient code, since a waste of unnecessary resources occurs. However, in some situations it can be of great importance to have this method in mind.
+### Percolation
+The objective of percolation is to use several recursive calls and base cases to move an index that will indicate whether a flow of '1' can percolate, or not
 
 ## ⬇️ How to Install and Run the Project <a name="howto"></a>
 
