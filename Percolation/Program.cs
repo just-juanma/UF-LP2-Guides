@@ -70,7 +70,6 @@ namespace PracticaPercolation
             flujo(original, llena, i + 1, j);
             flujo(original, llena, i, j + 1);
             flujo(original, llena, i, j - 1);
-            flujo(original, llena, i - 1, j);
 
         }
 
