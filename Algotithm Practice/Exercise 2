@@ -47,4 +47,4 @@ So the pairs will be (from 1 to n) (0, n) -> n combinations for i = 0
 
 But, this is for the first element, and for the second there will be n - 1 combinations (i = 1)
 And so on until n = 1 (base case).
-However, the vector with the largest number of inversions will be Σ r (from 1 to n)
+However, the vector with the largest number of inversions will be Σ r (from 0 to n)
