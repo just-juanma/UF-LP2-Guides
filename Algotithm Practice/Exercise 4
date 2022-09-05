@@ -1,0 +1,8 @@
+a. input: array, M, N. output: void
+for i = 0 to N 
+ array[i] = random(M); (2 + 3) N -> execution time: 5N
+
+random -> input: M. output: int
+return rand() % M + 1;
+
+b. if N = 10.000, execution time will be -> 5 * 10.000 = 50.000
