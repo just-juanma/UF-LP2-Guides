@@ -1,0 +1,15 @@
+f = Ω (log n) and g = O(n)
+a. g(n) = O(f(n)) -> n = log n False, n > log n
+b. f(n) = O(g(n)) -> log n = n True, log n < n
+c. f(n) = Ω(log(g(n))) -> log n = log n True
+d. f(n) = theta(log(g(n))) -> log n = theta log n (approximately) 
+e. f(n) + g(n) = Ω(log n) -> n = log n False, n > log n
+f. f(n) = O(g^2(n)) -> log n = n^2 False, n^2 > log n
+g. f(n) = Ω(f(n)g(n)) -> log n = log n n False, log n < log n n
+h. f(n) = theta(g(n)) + Ω(g^2(n))) -> log n = n^2 False, log n < n^2
+i. f(n) = theta(n) ^ g(n) = Ω(n) -> f(n)g(n) = Ω(n^2) -> n log n = n^2 False, n log n < n^2
+j. f(n) = theta(1) -> nf(n) = O(n) -> n log n = n True (approximately) 
+k. f(n) = Ω(n) ^ g(n) = O(n2) ⇒ g(n)/f(n) = O(n) -> n/log n = n False, n/log n < n
+l. f (n) = O(n^2) ^ g(n) = O(n) ⇒ f(g(n)) = O(n^3) -> log n = n^3 False, log n < n^3
+m. f(n) = O(log n) ⇒ 2 f(n) = O(n) -> 2 log n = n False, 2 log n < n
+n. f(n) = Ω(log n) ⇒ 2 f(n) = Ω(n) -> 2 log n = log n True (approximately) 
