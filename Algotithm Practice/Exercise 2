@@ -37,3 +37,14 @@ i = 3 and j = 4
 - i < j -> 3 < 4
 - A[i] > A[j] -> 6 > 1
 Another pair: (3,4)
+
+b. If we have A = { 1, 2, ..., n } -> A = { k, ..., k + n } (taking n as an index)
+The vector with the largest number of investments will be the one that is ordered from largest to smallest values
+Knowing this, we say with k = 0 (example):
+- k < k + n -> 0 < n
+- A[k] > A[k + n] -> A[0] > A[n]
+So the pairs will be (from 1 to n) (0, n) -> n combinations for i = 0
+
+But, this is for the first element, and for the second there will be n - 1 combinations (i = 1)
+And so on until n = 1 (base case).
+However, the vector with the largest number of inversions will be Σ k (from 1 to n)
