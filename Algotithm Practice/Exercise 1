@@ -1,8 +1,8 @@
 f = Ω (log n) and g = O(n)
 a. g(n) = O(f(n)) -> n = log n False, n > log n
-b. f(n) = O(g(n)) -> log n = n True, log n < n
+b. f(n) = O(g(n)) -> log n = n False, log n < n
 c. f(n) = Ω(log(g(n))) -> log n = log n True
-d. f(n) = theta(log(g(n))) -> log n = theta log n (approximately) 
+d. f(n) = theta(log(g(n))) -> log n = theta log n True (approximately) 
 e. f(n) + g(n) = Ω(log n) -> n = log n False, n > log n
 f. f(n) = O(g^2(n)) -> log n = n^2 False, n^2 > log n
 g. f(n) = Ω(f(n)g(n)) -> log n = log n n False, log n < log n n
