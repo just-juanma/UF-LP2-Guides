@@ -1,0 +1,39 @@
+a.
+We know that:
+- A[1,...,n] 
+- i < j (Example: 0 < 1)
+- A[i] > A[j] (Example: A[0] = 1 > A[1] = 0)
+- (i,j) is a reverse of A (Example: (A[i],A[j]) = (1, 0))
+
+If we have:
+- A[2,3,8,6,1]
+Take the first two nums (i = 0, j = 1)
+- i < j -> 0 < 1
+- A[i] > A[j] (2 > 3 its not true, so its not a reverse)
+In conclusion, we must find a pair for a value of j that is less than 2
+
+Let's see when i = 0 and j = 4
+- i < j -> 0 < 4
+- A[i] > A[j] -> 2 > 1
+So, we find de first reverse -> (0,4)
+In case you don't have more numbers lower than A[i] (2), we go to the next numbers
+
+i = 1 and j = 4
+- i < j -> 1 < 4
+- A[i] > A[j] -> 4 > 1
+Another pair: (1,4)
+
+i = 2 and j = 3
+- i < j -> 2 < 3
+- A[i] > A[j] -> 8 > 6
+Another pair: (2,3)
+
+i = 2 and j = 4
+- i < j -> 2 < 4
+- A[i] > A[j] -> 8 > 1
+Another pair: (2,4)
+
+i = 3 and j = 4
+- i < j -> 3 < 4
+- A[i] > A[j] -> 6 > 1
+Another pair: (3,4)
