@@ -1,0 +1,2 @@
+a. Knowing the DCM, you can use the algorithm A * B / DCM(A, B) and obtain the MCM.
+b. The complexity of the algorithm is its low efficiency, because it performs many operations, and it must first calculate the DCM (calling another function).
