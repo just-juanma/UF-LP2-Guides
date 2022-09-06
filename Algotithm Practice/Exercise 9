@@ -1,0 +1,4 @@
+a. The voracious solution to the commuter problem is to always take the shortest path between two options A and B, and so on until N is reached.
+This solution may fail to close the successive cycle, when taken the shortest path S, no path leading to N is found.
+Example: suppose you are 28 units away from A, and you are 5 units away from B, but it does not connect to N. You will choose B, but you will not reach N and the cycle will fail.
+b. 
