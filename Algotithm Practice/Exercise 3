@@ -1,14 +1,14 @@
-for i = 1 to n
+for i = 1 to N
  [...]
  if candidate i it's better than best
  best = i
  [...]
  
  a. Will be hired 1 time when the first candidate is the best.
- According to the probability distribution in an infinite equiprobable space -> P(best) = 1/n
+ According to the probability distribution in an infinite equiprobable space -> P(best) = 1/N
  
- b. Para contratar N veces, tiene que estar ordenado de mayor a menor. Entonces, deberia tener la siguiente distribucion: { N, N - 1, ... }
- Suponiendo { 4,3,2,1 }:
- La probabilidad de contratar al primero (el que nos interesa) es de 1/n. Para contratar al segundo seria 1/n, pero tengamos en cuenta que no estamos reponiendo, entonces nos queda 1/n-1.
- Seguiremos este algoritmo hasta llegar al final, y su resultado sera multiplicado entre todos. Teniendo P(contratar N veces) = 1/N * 1/N-1...
- Reduciendolo a P(contratar N veces) = 1/N!
+ b. To contract N times, it has to be ordered from highest to lowest. Then, it should have the following distribution: { N, N - 1, ... }
+ Assuming { 4,3,2,1 }:
+ The probability of hiring the first one (the one we are interested in) is 1/n. To hire the second one would be 1/n, but let's take into account that we are not replacing, so we are left with 1/n-1.
+ We will follow this algorithm until the end, and its result will be multiplied among all. Having P(hire N times) = 1/N * 1/N-1...
+ Reducing it to P(hire N times) = 1/N!
