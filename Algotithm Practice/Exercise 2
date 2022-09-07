@@ -1,6 +1,6 @@
 a.
 We know that:
-- A[1,...,n] = A[0,...,n]
+- A[1,...,n]
 - i < j (Example: 1 < 2)
 - A[i] > A[j] (Example: A[1] = 1 > A[2] = 0)
 - (i,j) is a reverse of A (Example: (A[i],A[j]) = (1, 2))
@@ -23,10 +23,10 @@ i = 2 and j = 5
 - A[i] > A[j] -> 4 > 1
 Another pair: (2,5)
 
-i = 2 and j = 3
+i = 3 and j = 4
 - i < j -> 2 < 3
 - A[i] > A[j] -> 8 > 6
-Another pair: (2,3)
+Another pair: (3,4)
 
 i = 3 and j = 5
 - i < j -> 3 < 5
