@@ -7,4 +7,4 @@ for i = 1 to n
  a. Will be hired 1 time when the first candidate is the best.
  According to the probability distribution in an infinite equiprobable space -> P(best) = 1/n
  
- b. What is the probability that the candidates are in the ascending order? taking into account that each candidate is a separate case (independent of each other), we consider P(hire N times) = 1/n
+ b. Para contratar N veces, tiene que estar ordenado de mayor a menor. Entonces, las probabilidades serian: 1/n, 1/n-1, ... 1
