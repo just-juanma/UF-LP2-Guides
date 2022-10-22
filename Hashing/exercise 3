@@ -1,0 +1,3 @@
+3. a. El hashing cerrado nos permite almacenar valores directamente en el array. En caso de que se produzca una colusion deberemos hacer rehashing, y reasignar el valor.
+b. Cuando resultan muchas colisiones en una agrupacion lineal de determinada posicion, por ejemplo. Es evitable empleando hashing cerrado, donde se tiene presente el concepto de listas enlazadas.
+c. Genera para cada posicion, sublistas encadenadas que permiten contener mas de un valor en una determinada posicion de la tabla hash
